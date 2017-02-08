@@ -8,15 +8,19 @@ namespace Shape_OOP
 {
     class Triangle : Shape
     {
-
+        public double Side1 { get; set; }
+        public double Side2 { get; set; }
+        public double Side3 { get; set; }
+        public double Base { get; set; }
+        public double Height { get; set; }
 
         public Triangle(double side1, double side2, double side3, int x = 0, int y = 0)
         {
             Side1 = side1;
             Side2 = side2;
             Side3 = side3;
-            xAxis = x;
-            yAxis = y;
+            xAxis = 0;
+            yAxis = 0;
         }
 
         public Triangle(double triBase, double triHeight, int x = 0, int y = 0)
@@ -34,65 +38,11 @@ namespace Shape_OOP
 
         public override double Perimeter()
         {
-            throw new NotImplementedException();
+            return (Side1 + Side2 + Side3);
         }
 
-
-        public double Side1
-        {
-            get
-            {
-                return Side1;
-            }
-            set
-            {
-                Side1 = value;
-            }
-        }
-        public double Side2
-        {
-            get
-            {
-                return Side2;
-            }
-            set
-            {
-                Side2 = value;
-            }
-        }
-        public double Side3
-        {
-            get
-            {
-                return Side3;
-            }
-            set
-            {
-                Side3 = value;
-            }
-        }
-        public double Base
-        {
-            get
-            {
-                return Base;
-            }
-            set
-            {
-                Base = value;
-            }
-        }
-        public double Height
-        {
-            get
-            {
-                return Height;
-            }
-            set
-            {
-                Height = value;
-            }
-        }
+        
+       
 
     }   
 }
