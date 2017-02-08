@@ -8,8 +8,8 @@ namespace Shape_OOP
 {
     abstract class Shape
     {
-        private int xAxis;
-        private int yAxis;
+        public int xAxis;
+        public int yAxis;
         public Shape()
         {
             xAxis = 0;
@@ -20,5 +20,7 @@ namespace Shape_OOP
             xAxis = x;
             yAxis = y;
         }
+        public abstract double Area();
+        public abstract double Perimeter();
     }
 }
