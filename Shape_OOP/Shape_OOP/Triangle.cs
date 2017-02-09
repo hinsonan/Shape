@@ -9,12 +9,12 @@ namespace Shape_OOP
     class Triangle : Shape
     {
         
-       
+        //initialize the properties
         public double Side1 { get; set; }
         public double Side2 { get; set; }
         public double Side3 { get; set; }
         
-
+        //set up the constructor
         public Triangle(double side1, double side2, double side3, int x = 0, int y = 0)
         {
             Side1 = side1;
@@ -25,7 +25,7 @@ namespace Shape_OOP
         }
 
         
-
+        //overides the area property so we can find our area
         public override double Area
         {
             get
@@ -34,7 +34,7 @@ namespace Shape_OOP
                 return Math.Sqrt(s * (s - Side1) * (s - Side2) * (s - Side3));
             }
         }
-
+        //overides the Perimeter property so we can add up the sides
         public override double Perimeter
         {
             get

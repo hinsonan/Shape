@@ -8,6 +8,9 @@ namespace Shape_OOP
 {
     class RightTriangle : Triangle
     {
+        //initialize the properties
+
+        //the Hypotenuse needs to be read only because you cant set the hypotenuse without re setting the Base and Height
         public double Hypotenuse
         {
             get
@@ -44,7 +47,7 @@ namespace Shape_OOP
             
         }
         
-
+        //constructor for this class
         public RightTriangle(double b, double h, int x = 0, int y = 0): base(b, h, 0)
         {
             Base = b;
