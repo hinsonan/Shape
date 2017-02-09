@@ -8,19 +8,22 @@ namespace Shape_OOP
 {
     abstract class Shape
     {
-        public int xAxis;
-        public int yAxis;
+        public Position p = new Position();
+        public Position Center { get; set; }
         public Shape()
         {
-            xAxis = 0;
-            yAxis = 0;
+           
         }
-        public Shape(int x, int y)
+        public Shape(int x, int y):this(new Position(x,y))
         {
-            xAxis = x;
-            yAxis = y;
+            
         }
-        public abstract double Area();
-        public abstract double Perimeter();
+
+        public Shape(Position p)
+        {
+            Center = p;
+        }
+        public abstract double Area { get; }
+        public abstract double Perimeter { get; }
     }
 }

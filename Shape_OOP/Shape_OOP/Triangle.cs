@@ -8,37 +8,39 @@ namespace Shape_OOP
 {
     class Triangle : Shape
     {
+        
+       
         public double Side1 { get; set; }
         public double Side2 { get; set; }
         public double Side3 { get; set; }
-        public double Base { get; set; }
-        public double Height { get; set; }
+        
 
         public Triangle(double side1, double side2, double side3, int x = 0, int y = 0)
         {
             Side1 = side1;
             Side2 = side2;
             Side3 = side3;
-            xAxis = 0;
-            yAxis = 0;
+            p.x = x;
+            p.y = y;
         }
 
-        public Triangle(double triBase, double triHeight, int x = 0, int y = 0)
+        
+
+        public override double Area
         {
-            Base = triBase;
-            Height = triHeight;
-            xAxis = x;
-            yAxis = y;
+            get
+            {
+                double s = (Side1 + Side2 + Side3) / 2.0;
+                return Math.Sqrt(s * (s - Side1) * (s - Side2) * (s - Side3));
+            }
         }
 
-        public override double Area()
+        public override double Perimeter
         {
-            throw new NotImplementedException();
-        }
-
-        public override double Perimeter()
-        {
-            return (Side1 + Side2 + Side3);
+            get
+            {
+                return (Side1 + Side2 + Side3);
+            }
         }
 
         
