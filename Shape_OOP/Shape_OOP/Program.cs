@@ -11,7 +11,10 @@ namespace Shape_OOP
         static void Main(string[] args)
         {
             Triangle t = new Triangle(10, 20, 30, 0, 0);
-            Console.Write(t.Perimeter());
+            Console.Write(t.Perimeter);
+            RightTriangle rt = new RightTriangle(2,3);
+            Console.Write(rt.Hypotenuse);
+            Console.ReadKey();
             
             
 

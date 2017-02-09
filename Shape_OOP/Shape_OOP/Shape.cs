@@ -10,6 +10,7 @@ namespace Shape_OOP
     {
         public Position p = new Position();
         public Position Center { get; set; }
+
         public Shape()
         {
            

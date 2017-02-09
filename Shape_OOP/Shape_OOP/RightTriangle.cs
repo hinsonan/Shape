@@ -8,8 +8,17 @@ namespace Shape_OOP
 {
     class RightTriangle : Triangle
     {
-        public double Hypotenuse { get; set; }
-        public double Base {
+        public double Hypotenuse
+        {
+            get
+            {
+                Side3 = Math.Sqrt(((Side1 * Side1) + (Side2 * Side2)));
+                return Side3;
+            }
+            
+        }
+        public double Base
+        {
             get
             {
                 return Side1;
@@ -20,12 +29,28 @@ namespace Shape_OOP
                 Side1 = value;
             }
         }
-        public double Height { get; set; }
+
+        public double Height
+        {
+            get
+            {
+                return Side2;
+            }
+            set
+            {
+                Side2 = value;
+
+            }
+            
+        }
+        
 
         public RightTriangle(double b, double h, int x = 0, int y = 0): base(b, h, 0)
         {
             Base = b;
-            Height = h;
+            Height = h;            
+            p.x = x;
+            p.y = y;
         }
     }
 }
