@@ -10,14 +10,26 @@ namespace Shape_OOP
     {
         static void Main(string[] args)
         {
-            Triangle t = new Triangle(10, 20, 30, 0, 0);
-            Console.Write(t.Perimeter);
-            RightTriangle rt = new RightTriangle(2,3);
-            Console.Write(rt.Hypotenuse);
+            //calls the test method of triangle
+            TriangleTest();
+
+
+
             Console.ReadKey();
             
             
 
         }
+        private static void TriangleTest()
+        {
+            //test all the methods of the triangle class
+            Triangle tri = new Triangle(10, 15, 16);
+            Console.WriteLine(tri.ToString());
+            tri.Side1 = 2;
+            tri.Side2 = 6;
+            tri.Side3 = 10;
+            Console.WriteLine(tri.ToString());
+        }
+
     }
 }

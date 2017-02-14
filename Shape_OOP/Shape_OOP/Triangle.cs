@@ -43,8 +43,13 @@ namespace Shape_OOP
             }
         }
 
-        
-       
+        public override string ToString()
+        {
+            return $"Side1: {Side1} Side2: {Side2} Side3: {Side3} Area: {Area} Perimeter: {Perimeter}";
+        }
+
+
+
 
     }   
 }
