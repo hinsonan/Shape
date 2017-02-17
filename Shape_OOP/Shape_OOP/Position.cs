@@ -19,6 +19,11 @@ namespace Shape_OOP
             this.y = y;
         }
 
-        
+        public override string ToString()
+        {
+            return $"({x}, {y})";
+        }
+
+
     }
 }

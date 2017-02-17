@@ -48,12 +48,16 @@ namespace Shape_OOP
         }
         
         //constructor for this class
-        public RightTriangle(double b, double h, int x = 0, int y = 0): base(b, h, 0)
+        public RightTriangle(double b, double h, int x = 0, int y = 0): base(b, h, 0, x, y) 
         {
             Base = b;
-            Height = h;            
-            p.x = x;
-            p.y = y;
+            Height = h;
+            
+        }
+
+        public override string ToString()
+        {
+            return $"Base: {Base} Height: {Height} Hypotenuse: {Hypotenuse} Position: {Center}";
         }
     }
 }

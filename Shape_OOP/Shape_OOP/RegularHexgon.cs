@@ -12,11 +12,10 @@ namespace Shape_OOP
 
         
 
-        public RegularHexgon(double side, int x = 0, int y =  0)
+        public RegularHexgon(double side, int x = 0, int y =  0):base(x,y)
         {
             Side = side;
-            p.x = x;
-            p.y = y;
+            
         }
 
         public override double Area
@@ -33,6 +32,11 @@ namespace Shape_OOP
             {
                 return 6 * Side;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Side: {Side} Position: {Center}";
         }
 
     }

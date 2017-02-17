@@ -10,16 +10,34 @@ namespace Shape_OOP
     {
         
         //initialize the properties
-        public double Length { get; set; }
-        public double Width { get; set; }
+        public double Length {
+            get
+            {
+                return Side1;
+            }
+            set
+            {
+                Side1 = value;
+            }
+        }
+        public double Width {
+            get
+            {
+                return Side2;
+            }
+            set
+            {
+                Side2 = value;
+            }
+
+        }
 
         //constructor that assigns length and width and position if the user specifies
-        public Rectangle(double l, double w, int x = 0, int y = 0) 
+        public Rectangle(double l, double w, int x = 0, int y = 0):base(x,y) 
         {
-            Length = l;
-            Width = w;
-            p.x = x;
-            p.y = y;
+            Side1 = l;
+            Side2 = w;
+           
 
         }
 
@@ -39,6 +57,11 @@ namespace Shape_OOP
             {
                 return ((Length * 2) + (Width * 2));
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Length: {Side1} Width: {Side2} Position: {Center}";
         }
 
     }

@@ -9,13 +9,12 @@ namespace Shape_OOP
     class Circle : Shape
     {
         public double Radius { get; set; }
-        public double Diameter { get; set; }
+        public double Diameter { get { return Radius * 2; } set { Radius = value; } }
 
-        public Circle(double radius, int x = 0, int y =0)
+        public Circle(double radius, int x = 0, int y =0):base(x,y)
         {
             Radius = radius;
-            p.x = x;
-            p.y = y;
+            
 
         }
         public override double Area
@@ -32,6 +31,11 @@ namespace Shape_OOP
             {
                 return (2 * Math.PI * Radius);
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Radius: {Radius} Diameter: {Diameter} Position: {Center}";
         }
     }
 }

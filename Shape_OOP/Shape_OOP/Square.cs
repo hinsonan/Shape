@@ -9,13 +9,26 @@ namespace Shape_OOP
     class Square : Rectangle
     {
         //initialze the property
-        public double Side { get; set; }
+        public double Side {
+            get
+            {
+                return Side1;
+            }
+            set
+            {
+                Side1 = value;
+            }
+        }
 
-        public Square(double side, int x = 0, int y = 0) : base(side,side)
+        public Square(double side, int x = 0, int y = 0) : base(side,side, x, y)
         {
-            Side = side;
-            p.x = x;
-            p.y = y;
+            Side1 = side;
+            
+        }
+
+        public override string ToString()
+        {
+            return $"Side: {Side} Position: {Center}";
         }
 
     }

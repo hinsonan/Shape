@@ -15,10 +15,9 @@ namespace Shape_OOP
         public double Side4 { get; set; }
 
         //constructor
-        public Quadrilateral(int x = 0, int y = 0)
+        public Quadrilateral(int x = 0, int y = 0):base(x,y)
         {
-            p.x = x;
-            p.y = y;
+            
         }
 
 

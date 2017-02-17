@@ -15,13 +15,14 @@ namespace Shape_OOP
         public double Side3 { get; set; }
         
         //set up the constructor
-        public Triangle(double side1, double side2, double side3, int x = 0, int y = 0)
+        public Triangle(double side1, double side2, double side3, int x = 0, int y = 0) : base(x,y)
         {
             Side1 = side1;
             Side2 = side2;
             Side3 = side3;
-            p.x = x;
-            p.y = y;
+            
+            
+
         }
 
         
@@ -45,7 +46,7 @@ namespace Shape_OOP
 
         public override string ToString()
         {
-            return $"Side1: {Side1} Side2: {Side2} Side3: {Side3} Area: {Area} Perimeter: {Perimeter}";
+            return $"Side1: {Side1} Side2: {Side2} Side3: {Side3} Position: {Center}";
         }
 
 

@@ -14,13 +14,12 @@ namespace Shape_OOP
 
         
 
-        public IsoscelesTrapezoid(double base1, double base2, double altitude, int x = 0, int y = 0)
+        public IsoscelesTrapezoid(double base1, double base2, double altitude, int x = 0, int y = 0):base(x,y)
         {
             Base1 = base1;
             Base2 = base2;
             Altitude = altitude;
-            p.x = x;
-            p.y = y;
+          
             
         }
 
@@ -40,6 +39,10 @@ namespace Shape_OOP
             }
         }
 
+        public override string ToString()
+        {
+            return $"Base1: {Base1} Base2: {Base2} Altitude: {Altitude} Position: {Center}";
+        }
 
 
     }
