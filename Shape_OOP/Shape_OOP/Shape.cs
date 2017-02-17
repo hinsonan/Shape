@@ -9,7 +9,7 @@ namespace Shape_OOP
     abstract class Shape
     {
         //initialize struct
-        public Position p = new Position();
+        
         public Position Center { get; set; }
 
         //default constructor

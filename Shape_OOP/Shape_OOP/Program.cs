@@ -78,11 +78,15 @@ namespace Shape_OOP
             //test the methods of the right triangle class
             RightTriangle rightTri = new RightTriangle(10, 15, 5, 3);
             Console.WriteLine(rightTri.ToString());
+            Console.WriteLine("Area: " + rightTri.Area);
+            Console.WriteLine("Perimeter" + rightTri.Perimeter);
 
             Console.WriteLine("");
 
             RightTriangle rightTri2 = new RightTriangle(5, 11);
             Console.WriteLine(rightTri2.ToString());
+            Console.WriteLine("Area: " + rightTri2.Area);
+            Console.WriteLine("Perimeter" + rightTri2.Perimeter);
 
 
         }
